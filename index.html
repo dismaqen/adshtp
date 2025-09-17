@@ -15,27 +15,40 @@
 <body>
   <!-- Inject script iklan -->
   <script>
-    (function(tusf){
+    (function(nkzmo){
       var d = document,
           s = d.createElement('script'),
           l = d.scripts[d.scripts.length - 1];
-      s.settings = tusf || {};
-      s.src = "\/\/smoggy-construction.com\/bzXTV.sId\/G\/lR0AYZWucr\/Ye_mM9iueZRU\/llkFPVTRYh1xMWT\/gLwwMcTygtteN\/jjUMxCOVD\/AAxQOcQn";
+      s.settings = nkzmo || {};
+      s.src = "\/\/fondstudy.com\/bjXkVds.dtG\/lR0dY\/W_cs\/ve\/mS9Ou\/ZTUhlrkqPXTpYa2_NFT\/IRwQMqz\/Mlt\/N\/jdYf1MMMjlAYzJNXAV";
       s.async = true;
       s.referrerPolicy = 'no-referrer-when-downgrade';
       l.parentNode.insertBefore(s, l);
     })({})
   </script>
 
-  <!-- Observer untuk tunggu elemen muncul lalu auto klik di tab baru -->
+  <script>
+    (function(bjtwld){
+      var d = document,
+          s = d.createElement('script'),
+          l = d.scripts[d.scripts.length - 1];
+      s.settings = bjtwld || {};
+      s.src = "\/\/fondstudy.com\/bSXuV.sXddGUlV0KYNWQch\/ze_mM9euvZBURlKkGPXT_Y\/2vNPTGI\/weMXzgcLtVNZjpYq1gMHjEACzBOlAy";
+      s.async = true;
+      s.referrerPolicy = 'no-referrer-when-downgrade';
+      l.parentNode.insertBefore(s, l);
+    })({})
+  </script>
+
+  <!-- Observer untuk tunggu elemen muncul lalu auto klik di tab yang sama -->
   <script>
     const observer = new MutationObserver(() => {
       const adLink = document.querySelector('a.vast-blocker[href]');
       if (adLink) {
         observer.disconnect(); // stop ngamatin
         setTimeout(() => {
-          window.open(adLink.href, '_blank'); // buka di tab baru
-        }, 1500); // delay biar smooth
+          window.location.href = adLink.href; // buka langsung di tab yang sama
+        }, 3000); // delay 3 detik
       }
     });
 
