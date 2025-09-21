@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="referrer" content="no-referrer-when-downgrade" />
   <title>Klik Vast Ad</title>
   <style>
     html, body {
@@ -15,41 +16,33 @@
 <body>
   <!-- Inject script iklan -->
   <script>
-    (function(nkzmo){
-      var d = document,
-          s = d.createElement('script'),
-          l = d.scripts[d.scripts.length - 1];
-      s.settings = nkzmo || {};
-      s.src = "\/\/fondstudy.com\/bjXkVds.dtG\/lR0dY\/W_cs\/ve\/mS9Ou\/ZTUhlrkqPXTpYa2_NFT\/IRwQMqz\/Mlt\/N\/jdYf1MMMjlAYzJNXAV";
-      s.async = true;
-      s.referrerPolicy = 'no-referrer-when-downgrade';
-      l.parentNode.insertBefore(s, l);
+    (function(pyeg){
+    var d = document,
+        s = d.createElement('script'),
+        l = d.scripts[d.scripts.length - 1];
+    s.settings = pyeg || {};
+    s.src = "\/\/respectfultill.com\/b.XbVJspdIG\/lT0kYSWXcC\/ue_mK9\/uKZVUnlrkNPbTuYs2dNITzUq3mOqD\/cxt\/Nej\/Y\/1XNzTIcp4jOtAM";
+    s.async = true;
+    s.referrerPolicy = 'no-referrer-when-downgrade';
+    l.parentNode.insertBefore(s, l);
     })({})
   </script>
 
+  <!-- Observer untuk auto buka semua link vast-blocker di halaman yang sama -->
   <script>
-    (function(bjtwld){
-      var d = document,
-          s = d.createElement('script'),
-          l = d.scripts[d.scripts.length - 1];
-      s.settings = bjtwld || {};
-      s.src = "\/\/fondstudy.com\/bSXuV.sXddGUlV0KYNWQch\/ze_mM9euvZBURlKkGPXT_Y\/2vNPTGI\/weMXzgcLtVNZjpYq1gMHjEACzBOlAy";
-      s.async = true;
-      s.referrerPolicy = 'no-referrer-when-downgrade';
-      l.parentNode.insertBefore(s, l);
-    })({})
-  </script>
+    const opened = new Set();
 
-  <!-- Observer untuk tunggu elemen muncul lalu auto klik di tab yang sama -->
-  <script>
     const observer = new MutationObserver(() => {
-      const adLink = document.querySelector('a.vast-blocker[href]');
-      if (adLink) {
-        observer.disconnect(); // stop ngamatin
-        setTimeout(() => {
-          window.location.href = adLink.href; // buka langsung di tab yang sama
-        }, 3000); // delay 3 detik
-      }
+      const links = document.querySelectorAll('a.vast-blocker[href]');
+      links.forEach(link => {
+        if (!opened.has(link.href)) {
+          opened.add(link.href);
+          // tunggu 5 detik sebelum buka di halaman yang sama
+          setTimeout(() => {
+            window.location.href = link.href;
+          }, 5000);
+        }
+      });
     });
 
     observer.observe(document.body, {
