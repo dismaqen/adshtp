@@ -1,54 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="referrer" content="no-referrer-when-downgrade" />
-  <title>Klik Vast Ad</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Script</title>
 </head>
 <body>
-  <!-- Inject script iklan -->
-  <script>
-    (function(pyeg){
-    var d = document,
-        s = d.createElement('script'),
-        l = d.scripts[d.scripts.length - 1];
-    s.settings = pyeg || {};
-    s.src = "\/\/respectfultill.com\/b.XbVJspdIG\/lT0kYSWXcC\/ue_mK9\/uKZVUnlrkNPbTuYs2dNITzUq3mOqD\/cxt\/Nej\/Y\/1XNzTIcp4jOtAM";
-    s.async = true;
-    s.referrerPolicy = 'no-referrer-when-downgrade';
-    l.parentNode.insertBefore(s, l);
-    })({})
-  </script>
-
-  <!-- Observer untuk auto buka semua link vast-blocker di halaman yang sama -->
-  <script>
-    const opened = new Set();
-
-    const observer = new MutationObserver(() => {
-      const links = document.querySelectorAll('a.vast-blocker[href]');
-      links.forEach(link => {
-        if (!opened.has(link.href)) {
-          opened.add(link.href);
-          // tunggu 5 detik sebelum buka di halaman yang sama
-          setTimeout(() => {
-            window.location.href = link.href;
-          }, 5000);
-        }
-      });
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-  </script>
+    <!-- Script dari URL yang kamu berikan -->
+    <script async src="https://ss.mrmnd.com/static/ea52301f-a55f-4646-bd86-cbbc2f803379.js"></script>
 </body>
 </html>
